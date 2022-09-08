@@ -1,19 +1,31 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <v-app id="inspire">
+    <v-navigation-drawer v-model="drawer">
+      <!--  -->
+    </v-navigation-drawer>
 
-    <div class="wrapper">
+    <v-app-bar>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+      <v-toolbar-title>Application!!</v-toolbar-title>
+    </v-app-bar>
 
-  <RouterView />
+    <v-main>
+      <!--  -->
+    </v-main>
+  </v-app>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'App',
+
+  data () {
+    return {
+      drawer: null
+    }
+  },
+})
+</script>
